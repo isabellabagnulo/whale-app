@@ -1,0 +1,16 @@
+.button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    &.default{
+        background: #3772FF
+    }
+    &.outlined{
+        border: 1px solid #3772FF;
+        background: transparent;
+        text-align: center;
+        display: block;
+    }
+}
+.button{
+    background: red;
+}

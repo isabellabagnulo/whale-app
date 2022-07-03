@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+ul,
+ul li{
+    list-style: none;
+}
+a{text-decoration: none;}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* COLORS */
+:root {
+    --white: #FAF6F0;
+    --grey: #D0CCC7;
+    --black: #3C3B36;
+}
+
+/* GENERAL */
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    & a{
+        color: var(--black);
+    }
+}
+
+/* TYPOGRAPHY */
+h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+h2{
+    font-size: 18px;
+    font-weight: 700;
+}
+h3{
+    font-size: 16px;
+    font-weight: 600;
+    &.text-with-line {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 0.7px solid #000; 
+        line-height: 0.1em;
+        margin: 10px 0 20px;
+        & span { 
+            background:var(--white); 
+            padding:0 10px; 
+        } 
+    }
+}
+p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.text-medium{
+    font-weight: 600;
+}
+.text-bold, button .text-bold{
+    font-weight: 700;
+}
+
+/* SPACING */
+h1{
+    padding-bottom: 10px;
+}
+main{
+    padding: 0 20px;
+}
+
+/* MAIN */
+main .col.maps{
+    display: none;
+}

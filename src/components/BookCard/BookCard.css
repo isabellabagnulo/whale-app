@@ -1,0 +1,24 @@
+.card{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: solid 1px #D0CCC7;
+}
+.card:last-child{
+    border-bottom: none;
+}
+
+.card .card-cover{
+    justify-self: center;
+}
+
+.card .card-cover{
+    & img{
+        height: 100px;
+    }
+}
+
+a.card{
+    color: #3C3B36;
+}

@@ -1,0 +1,13 @@
+.book{
+    display: grid;
+    & .book-cover{
+        width: 50vw;
+        height: auto;
+        padding: 40px 0;
+        margin: 0 auto;
+    }
+    & .book-content{
+        display: grid;
+        gap: 30px;
+    }
+}

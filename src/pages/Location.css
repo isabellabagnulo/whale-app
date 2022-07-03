@@ -1,0 +1,13 @@
+.location{
+    & .location-cover{
+        height: 300px;
+        margin: 0 -20px;
+        color: #FAF6F0;
+        display: flex;
+        align-items: flex-end;
+        & .overlay{
+            padding: 20px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        }
+    }
+}
