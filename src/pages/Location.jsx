@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import { Button } from "../components/buttons/Button/Button"
@@ -39,8 +39,12 @@ export const Location = () => {
                             <p><span className="text-bold">{availableBooks}</span> libri disponibili</p>
                         </div>
                     </div>
+
+                    <Link to="/add">Aggiungi libro</Link>
+
                 </div>
             }
+
             
         </main>
     )

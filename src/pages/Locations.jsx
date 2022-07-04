@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import { LocationCard } from '../components/LocationCard/LocationCard'
 import { ENDPOINT } from '../libs/const'
 

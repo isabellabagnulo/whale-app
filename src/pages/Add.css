@@ -1,0 +1,54 @@
+form{
+    & .form-section{
+        padding: 20px 0 30px 0;
+        max-width: 400px;
+        display: grid;
+        gap: 10px;
+        /* grid-template-columns: repeat(2, 1fr); */
+        & .form-sub-section{
+            display: grid;
+            gap: 10px;
+        }
+        & .input-box{
+            position: relative;
+            & input, & textarea{
+                width: 100%;
+                padding: 20px 15px 10px 15px;
+                font-size: 16px;
+                color: #3C3B36;
+                border: 1px solid #D0CCC7;
+                border-radius: 5px;
+                outline: none;
+                background: transparent;
+                &:focus ~ label, &:valid ~ label{
+                    top: -10px;
+                    left: 15px;
+                    color: #3C3B36;
+                    font-size: 10px;
+                }
+                &:focus{
+                    border: 2px solid rgba(60, 59, 54, 0.7);
+                }
+            }
+            & textarea{
+                height: 300px;
+            }
+            & label {
+                position: absolute;
+                top:0;
+                left: 15px;
+                padding: 15px 0;
+                font-size: 16px;
+                color: rgba(60, 59, 54, 0.7);
+                pointer-events: none;
+                transition: .5s;
+            }
+        }
+    }
+    & button{
+        background: #3772FF;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #FAF6F0;
+    }
+}

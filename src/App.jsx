@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+import { Add } from "./pages/Add";
 import { Book } from "./pages/Book";
 import { Books } from "./pages/Books";
 import { Footer } from "./components/Footer/Footer";
@@ -19,6 +20,7 @@ export const App = () => {
                 <Route path="/location/:id" element={<Location />} />
                 <Route path="/locations" element={<Locations />} />
                 <Route path="/map" element={<Map />} />
+                <Route path="/add" element={<Add />} />
 
             </Routes>
             <Footer />
