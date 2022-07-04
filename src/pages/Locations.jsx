@@ -17,11 +17,11 @@ export const Locations = () => {
     }, [])
 
     return (
-        <div>
+        <main className='locations'>
             <h1>Pagina locations</h1>
             {locations.map(location => 
                 <LocationCard key={location.id} location={location}/>
             )}
-        </div>
+        </main>
     )
 }

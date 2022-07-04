@@ -4,18 +4,14 @@
     align-items: center;
     padding: 20px 0;
     border-bottom: solid 1px #D0CCC7;
-}
-.card:last-child{
-    border-bottom: none;
-}
-
-.card .card-cover{
-    justify-self: start;
-}
-
-.card .card-cover{
-    & img{
-        height: 100px;
+    &:last-child{
+        border-bottom: none;
+    }
+    & .card-cover{
+        justify-self: start;
+        & img{
+            height: 100px;
+        }
     }
 }
 

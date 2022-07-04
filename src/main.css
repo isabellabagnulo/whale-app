@@ -71,6 +71,9 @@ p{
 .text-bold, button .text-bold{
     font-weight: 700;
 }
+.opacity-70{
+    color: rgba(60, 59, 54, 0.7);
+}
 
 /* SPACING */
 h1{
@@ -81,6 +84,11 @@ main{
 }
 
 /* MAIN */
-main .col.maps{
-    display: none;
+main{
+    &.col.maps{
+        display: none;
+    }
+    &.locations{
+        width: 50vw;
+    }
 }
