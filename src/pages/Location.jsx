@@ -1,13 +1,16 @@
 import { useParams, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-import { Button } from "../components/buttons/Button/Button"
+import { AddButton } from "../components/buttons/AddButton/AddButton"
+import { BookCard } from "../components/BookCard/BookCard"
+import { ENDPOINT } from "../libs/const"
 
 import './Location.css'
 
 export const Location = () => {
     const [location, setLocation] = useState()
     const params = useParams()
+    const [books, setBooks] = useState([])
 
     useEffect(() => {
         const getLocation = async () => {
@@ -19,6 +22,16 @@ export const Location = () => {
 
         return getLocation
     }, [])
+
+    useEffect(() => {
+        const getBooks = async () => {
+            const response = await fetch("http://localhost:1337/api/books?filters[availableAt][$eq]=" + location.attributes.title)
+            const {data} = await response.json()
+            setBooks(data)
+        }
+
+        return getBooks
+    }, [location])
 
     const availableBooks = "N"
 
@@ -35,17 +48,20 @@ export const Location = () => {
                     }}>
                         <div className="overlay">
                             <h1>{location.attributes.title}</h1>
-                            <p>{location.attributes.address}</p>
-                            <p><span className="text-bold">{availableBooks}</span> libri disponibili</p>
+                            <p className="text-light">{location.attributes.address}</p>
+                            <p className="text-light"><span className="text-bold">{availableBooks}</span> libri disponibili</p>
                         </div>
                     </div>
 
-                    <Link to="/add">Aggiungi libro</Link>
+                    <AddButton />
+
+                    {books.map(book => 
+                        <BookCard key={book.id} book={book}/>
+                    )}
 
                 </div>
             }
 
-            
         </main>
     )
 }

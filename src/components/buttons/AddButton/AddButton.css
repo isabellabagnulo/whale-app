@@ -1,0 +1,16 @@
+.add-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    & .add-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #3772FF;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        margin-left: 20px;
+    }
+}

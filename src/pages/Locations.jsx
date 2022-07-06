@@ -6,6 +6,7 @@ import { ENDPOINT } from '../libs/const'
 
 export const Locations = () => {
     const [locations, setLocations] = useState([])
+    
     useEffect(() => {
         const getLocations = async () => {
             const response = await fetch(ENDPOINT("locations"))
