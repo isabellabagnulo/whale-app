@@ -91,7 +91,12 @@ main{
     &.col.maps{
         display: none;
     }
-    &.locations{
-        width: 50vw;
+}
+
+@media(min-width:1050px){
+    main{
+        &.locations{
+            width: 50vw;
+        }
     }
 }

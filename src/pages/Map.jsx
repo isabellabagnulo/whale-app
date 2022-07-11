@@ -3,6 +3,7 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import { useNavigate } from "react-router-dom";
 
 import { Tabs } from '../components/buttons/Tabs/Tabs';
+import { Button } from '../components/buttons/Button/Button';
 
 // const containerStyle = {
 //   width: '100%',
@@ -51,6 +52,11 @@ export const Map = () => {
     <main>
       <h1>Sono la mappa</h1>
       <Tabs />
+      <Button
+        url="/locations"
+        type=" default"
+        text="Lista dei locali"
+      />
     </main>
   )
 
