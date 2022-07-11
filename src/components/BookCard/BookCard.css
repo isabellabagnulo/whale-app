@@ -8,7 +8,7 @@
         border-bottom: none;
     }
     & .card-cover{
-        justify-self: start;
+        /* justify-self: start; */
         & img{
             height: 100px;
         }

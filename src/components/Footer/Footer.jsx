@@ -1,5 +1,9 @@
+import './Footer.css'
+
 export const Footer = () => {
     return(
-        <footer>Footer</footer>
+        <footer>
+            <p>Developed by Isabella Bagnulo</p>
+        </footer>
     )
 }

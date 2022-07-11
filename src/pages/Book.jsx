@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Button } from "../components/buttons/Button/Button"
 
 import './Book.css'
+import { Back } from "../components/buttons/Back/Back"
 
 export const Book = () => {
     const [book, setBook] = useState()
@@ -23,6 +24,7 @@ export const Book = () => {
     return (
         <main>
             <h1>Pagina single book</h1>
+            <Back url="/" />
             {book &&
                 <div className="book">
                     <img className="book-cover" src={`http://localhost:1337${book.attributes.cover.data.attributes.url}`} alt="" />

@@ -15,7 +15,16 @@ export const LocationCard = ({location}) => {
             <div className="card-description">
                 <h2>{location.attributes.title}</h2>
                 <p className="opacity-70">{location.attributes.address}</p>
-                <p><span className="text-medium">{location.attributes.availableBook}</span> <span className="opacity-70">libri disponibili</span></p>
+                <p>
+                    <span className="text-medium">{(location.attributes.books.data).length}</span>
+                    <span className="opacity-70">{
+                        ((location.attributes.books.data).length <= 1) ? (
+                            " libro disponibile"
+                        ) : (
+                            " libri disponibili"
+                        )
+                    }</span>
+                </p>
             </div>
             
            

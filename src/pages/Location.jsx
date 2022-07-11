@@ -23,15 +23,18 @@ export const Location = () => {
         return getLocation
     }, [])
 
-    useEffect(() => {
-        const getBooks = async () => {
-            const response = await fetch("http://localhost:1337/api/books?filters[availableAt][$eq]=" + location.attributes.title)
-            const {data} = await response.json()
-            setBooks(data)
-        }
+    // useEffect(() => {
+    //     // console.log(location)
+    //     if (!location) return
+    //     console.log(location)
+    //     const getBooks = async () => {
+    //         const response = await fetch("http://localhost:1337/api/books?populate[location][$eq]=" + location.attributes.title)
+    //         const {data} = await response.json()
+    //         setBooks(data)
+    //     }
 
-        return getBooks
-    }, [location])
+    //     return getBooks
+    // }, [location])
 
     const availableBooks = "N"
 
@@ -55,7 +58,7 @@ export const Location = () => {
 
                     <AddButton />
 
-                    {books.map(book => 
+                    {location.attributes.books.data.map(book =>
                         <BookCard key={book.id} book={book}/>
                     )}
 

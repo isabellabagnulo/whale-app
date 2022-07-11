@@ -22,7 +22,7 @@ export const Books = () => {
             <h1>Sezione books</h1>
             <Tabs />
             {books.map(book => 
-                <BookCard key={book.id} book={book}/>
+                <BookCard key={book.id} book={book} location={book.attributes.location}/>
             )}
         </main>
     )

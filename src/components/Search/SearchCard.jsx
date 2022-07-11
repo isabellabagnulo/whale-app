@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 
-import "./BookCard.css"
+import "./Search.css"
 
-export const BookCard = ({book, location}) => {
+export const SearchCard = ({book, location}) => {
     return (
-        <Link className="card" to={`/book/${book.id}`}>
+        <Link className="search-card" to={`/book/${book.id}`}>
             <div className="card-cover">
                 <img src={`${book.attributes.cover_url}`} alt="" />
             </div>
@@ -15,9 +15,6 @@ export const BookCard = ({book, location}) => {
                     <p>Disponibile presso: {location.data.attributes.title}</p>
                 )}
             </div>
-            
-           
-            
         </Link>
     )
 }
