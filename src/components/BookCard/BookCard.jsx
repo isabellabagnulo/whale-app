@@ -10,9 +10,9 @@ export const BookCard = ({book, location}) => {
             </div>
             <div className="card-description">
                 <h2>{book.attributes.title}</h2>
-                <p>{book.attributes.author}</p>
+                <p className="opacity-70">{book.attributes.author}</p>
                 {location && (
-                    <p>Disponibile presso: {location.data.attributes.title}</p>
+                    <p className="opacity-70">Disponibile presso: <span className="text-medium">{location.data.attributes.title}</span></p>
                 )}
             </div>
             

@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import { AddButton } from "../components/buttons/AddButton/AddButton"
+import { Back } from "../components/buttons/Back/Back"
 import { BookCard } from "../components/BookCard/BookCard"
 import { ENDPOINT } from "../libs/const"
 
@@ -23,24 +24,11 @@ export const Location = () => {
         return getLocation
     }, [])
 
-    // useEffect(() => {
-    //     // console.log(location)
-    //     if (!location) return
-    //     console.log(location)
-    //     const getBooks = async () => {
-    //         const response = await fetch("http://localhost:1337/api/books?populate[location][$eq]=" + location.attributes.title)
-    //         const {data} = await response.json()
-    //         setBooks(data)
-    //     }
-
-    //     return getBooks
-    // }, [location])
-
-    const availableBooks = "N"
-
     return (
-        <main>
-            <h1>Pagina single location</h1>
+        <main className="single-location">
+
+            <Back url="/locations" />
+
             {location &&
                 <div className="location">
                     <div className="location-cover" style={{
@@ -52,7 +40,16 @@ export const Location = () => {
                         <div className="overlay">
                             <h1>{location.attributes.title}</h1>
                             <p className="text-light">{location.attributes.address}</p>
-                            <p className="text-light"><span className="text-bold">{availableBooks}</span> libri disponibili</p>
+                            <p className="text-light">
+                                <span className="text-bold">{(location.attributes.books.data).length}</span>
+                                {
+                                    ((location.attributes.books.data).length <= 1) ? (
+                                        " libro disponibile"
+                                    ) : (
+                                        " libri disponibili"
+                                    )
+                                }
+                            </p>
                         </div>
                     </div>
 

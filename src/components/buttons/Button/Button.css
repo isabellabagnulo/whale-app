@@ -1,8 +1,10 @@
 .button{
     padding: 10px 20px;
     border-radius: 5px;
+    display: inline-block;
     &.default{
-        background: #3772FF
+        background: #3772FF;
+        color: #FAF6F0;
     }
     &.outlined{
         border: 1px solid #3772FF;

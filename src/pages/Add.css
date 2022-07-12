@@ -20,6 +20,7 @@ form{
                 border-radius: 5px;
                 outline: none;
                 background: transparent;
+                margin: 1px;
                 &:focus ~ label, &:valid ~ label{
                     top: -10px;
                     left: 15px;
@@ -28,6 +29,7 @@ form{
                 }
                 &:focus{
                     border: 2px solid rgba(60, 59, 54, 0.7);
+                    margin: 0;
                 }
             }
             & textarea{

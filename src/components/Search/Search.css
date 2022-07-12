@@ -21,14 +21,16 @@
     border: 1px solid rgba(60, 59, 54, 0.5);
     background: #FAF6F0;
     width: 100%;
-    &:focus{
+    margin: 1px;
+    &:focus-visible{
         border: 2px solid rgba(60, 59, 54, 0.7);
+        margin: 0;
     }
 }
 
-.results{
+/* .results{
     padding: 20px 0 0 0;
-}
+} */
 .search-card{
     display: grid;
     grid-template-columns: 1fr 5fr;

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import { LocationCard } from '../components/LocationCard/LocationCard'
 import { ENDPOINT } from '../libs/const'
@@ -19,7 +18,6 @@ export const Locations = () => {
 
     return (
         <main className='locations'>
-            <h1>Pagina locations</h1>
             {locations.map(location => 
                 <LocationCard key={location.id} location={location}/>
             )}

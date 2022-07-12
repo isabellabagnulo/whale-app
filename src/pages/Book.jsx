@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 
+import { Back } from "../components/buttons/Back/Back"
 import { Button } from "../components/buttons/Button/Button"
 
 import './Book.css'
-import { Back } from "../components/buttons/Back/Back"
 
 export const Book = () => {
     const [book, setBook] = useState()
@@ -23,11 +23,11 @@ export const Book = () => {
 
     return (
         <main>
-            <h1>Pagina single book</h1>
             <Back url="/" />
+
             {book &&
                 <div className="book">
-                    <img className="book-cover" src={`http://localhost:1337${book.attributes.cover.data.attributes.url}`} alt="" />
+                    <img className="book-cover" src={`${book.attributes.cover_url}`} alt="" />
                     <div className="book-content">
                         <div className="book-header">
                             <h1>{book.attributes.title}</h1>
@@ -44,9 +44,9 @@ export const Book = () => {
                         </div>
                         
                         <Button
-                            url="/"
+                            url={`/location/${book.attributes.location.data.id}`}
                             type=" outlined"
-                            text={["Disponibile presso: ", <span className="text-bold">{book.attributes.availableAt}</span>]}
+                            text={["Disponibile presso: ", <span className="text-bold">{book.attributes.location.data.attributes.title}</span>]}
                         />
 
                         {book.attributes.plot && 
@@ -56,7 +56,6 @@ export const Book = () => {
                             </div> 
                         }
                     </div>
-                    
                     
                 </div>
             }

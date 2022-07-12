@@ -7,7 +7,7 @@ import './Search.css'
 
 export const Search = () => {
   const [text, setText] = useState("")
-  const [books, setBooks] = useState([])
+  const [books, setBooks] = useState(null)
   const [isSearching, setIsSearching] = useState(false);
 
   const debouncedSearchTerm = useDebounce(text, 500);
@@ -31,7 +31,7 @@ export const Search = () => {
   }, [debouncedSearchTerm])
 
   return (
-    <main className='search-section'>
+    <div className='search-section'>
       <input
         className="search"
         type="text"
@@ -41,10 +41,10 @@ export const Search = () => {
 
       <div className='results'>
         {isSearching && <div>Searching ...</div>}
-        {books && books.length && books.map(book => 
+        {books && books.map(book => 
           <SearchCard key={book.id} book={book}/>
         )}
       </div>
-    </main>
+    </div>
   )
 }

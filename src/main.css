@@ -52,7 +52,7 @@ h3{
     &.text-with-line {
         width: 100%; 
         text-align: center; 
-        border-bottom: 0.7px solid #000; 
+        border-bottom: 0.7px solid var(--grey); 
         line-height: 0.1em;
         margin: 10px 0 20px;
         & span { 
@@ -83,13 +83,27 @@ h1{
     padding-bottom: 10px;
 }
 main{
-    padding: 0 20px;
+    padding: 91.4px 20px 0px 20px;
 }
 
 /* MAIN */
 main{
     &.col.maps{
         display: none;
+    }
+    &.add-page{
+        padding-top: 163.4px;
+    }
+}
+.mappa{
+    margin-top: 91.4px;
+    height: calc(100vh - 91.4px - 62.6px);
+    & .button{
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 90px;
     }
 }
 

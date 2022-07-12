@@ -1,0 +1,13 @@
+.back{
+    display: inline-block;
+    margin-top: 20px;
+    position: fixed;
+    top: 91.4px;
+    left: 20px;
+    z-index: 99px;
+}
+.add-page{
+    & .back{
+        margin: 20px 0;
+    }
+}

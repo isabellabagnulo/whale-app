@@ -1,7 +1,7 @@
 import { useEffect, useReducer, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
-import { Button } from "../components/buttons/Button/Button"
+import { Back } from "../components/buttons/Back/Back"
 
 import './Add.css'
 
@@ -16,7 +16,8 @@ const initialState = {
     year_of_publication: "",
     language: "",
     format: "",
-    plot: ""
+    plot: "",
+    location: " "
 }
 
 const reducer = (state, action) => {
@@ -44,7 +45,7 @@ const reducer = (state, action) => {
     }
 }
 
-export const Add = () => {
+export const Add = ({location}) => {
     const [active, setActive] = useState(false)
     const navigate = useNavigate()
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -72,10 +73,12 @@ export const Add = () => {
     }
 
     return(
-        <main>
+        <main className="add-page">
+
+            <Back url="/" />
+
             <form className="my-3" onSubmit={handleSubmit} noValidate>
                 {console.log(active)}
-
 
                 <h3>Dati obbligatori*</h3>
                 <div className="form-section">
