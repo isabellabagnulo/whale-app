@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import { LocationCard } from '../components/LocationCard/LocationCard'
+import { Switch } from '../components/buttons/Switch/Switch'
+import { Tabs } from '../components/buttons/Tabs/Tabs'
 import { ENDPOINT } from '../libs/const'
 
 export const Locations = () => {
@@ -18,6 +20,8 @@ export const Locations = () => {
 
     return (
         <main className='locations'>
+            <Tabs />
+            <Switch />
             {locations.map(location => 
                 <LocationCard key={location.id} location={location}/>
             )}

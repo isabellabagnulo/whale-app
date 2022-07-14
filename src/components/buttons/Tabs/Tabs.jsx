@@ -9,7 +9,7 @@ export const Tabs = () => {
     return(
         <div className="tabs">
             <NavLink to="/">Libri</NavLink>
-            <NavLink to="/map">Locali</NavLink>
+            <NavLink to="/locations">Locali</NavLink>
         </div>
     )
 }

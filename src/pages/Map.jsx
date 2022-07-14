@@ -2,8 +2,8 @@ import {memo, useState, useCallback, useEffect } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import { useNavigate } from "react-router-dom";
 
-import { Tabs } from '../components/buttons/Tabs/Tabs';
 import { Button } from '../components/buttons/Button/Button';
+import { Switch } from '../components/buttons/Switch/Switch';
 
 const containerStyle = {
   width: '100%',
@@ -56,7 +56,8 @@ export const Map = () => {
 
   return isLoaded && locations.length ? (
     <div className='mappa'>
-      <Tabs />
+
+      <Switch />
 
       <GoogleMap
         mapContainerStyle={containerStyle}
@@ -74,12 +75,7 @@ export const Map = () => {
             }} />
         )}
       </GoogleMap>
-
-      <Button
-        url="/locations"
-        type=" default"
-        text="Lista dei locali"
-      />
+      
     </div>
   ) : <></>
 }

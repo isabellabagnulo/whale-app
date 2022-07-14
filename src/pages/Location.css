@@ -2,7 +2,7 @@
     & .location-cover{
         height: 300px;
         margin: 0 -20px;
-        color: #FAF6F0;
+        color: #FCFCFC;
         display: flex;
         align-items: flex-end;
         & .overlay{

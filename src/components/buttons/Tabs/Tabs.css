@@ -2,22 +2,23 @@
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0);
-    padding: 5px 0;
+    padding: 5px 0 8px 0;
     margin: 20px 0;
-    border: solid 1px #D0CCC7;
-    border-radius: 15px;
-    background: #FAF6F0;
-    box-shadow: 0 0 30px rgba(60, 59, 54, 0.1); 
+    border-radius: 20px;
+    background: #FCFCFC;
+    box-shadow: 0 0 5px rgba(60, 60, 60, 0.1); 
     display: inline-block;
     z-index: 90;
     & a{
         padding: 0 20px;
         color: #3C3B36;
+        font-weight: 300;
         &:first-child{
-            border-right: solid 1px #D0CCC7;
+            border-right: solid 1px #E3E3E3;
         }
         &.active{
-            font-weight: 700;
+            font-weight: 600;
+            font-size: 18px;
         }
     }
 }

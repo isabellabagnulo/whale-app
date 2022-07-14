@@ -9,6 +9,7 @@ export const Search = () => {
   const [text, setText] = useState("")
   const [books, setBooks] = useState(null)
   const [isSearching, setIsSearching] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const debouncedSearchTerm = useDebounce(text, 500);
   
@@ -30,6 +31,10 @@ export const Search = () => {
     }
   }, [debouncedSearchTerm])
 
+  const handleClick = event => {
+    setIsActive(current => !current);
+  };
+
   return (
     <div className='search-section'>
       <input
@@ -37,9 +42,10 @@ export const Search = () => {
         type="text"
         placeholder="Cerca"
         onChange={(event) => setText(event.target.value.toLocaleLowerCase())}
+        onClick={handleClick}
       />
 
-      <div className='results'>
+      <div className={isActive ? 'results active' : 'results'}>
         {isSearching && <div>Searching ...</div>}
         {books && books.map(book => 
           <SearchCard key={book.id} book={book}/>

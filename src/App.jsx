@@ -9,6 +9,8 @@ import { Location } from "./pages/Location";
 import { Locations } from "./pages/Locations"
 import { Map } from "./pages/Map";
 
+import './App.css'
+
 export const App = () => {
     return (
         <>

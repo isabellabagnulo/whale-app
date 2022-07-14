@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-BlackItalic.woff2') format('woff2'),
+        url('Poligon-BlackItalic.woff') format('woff'),
+        url('Poligon-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-BoldItalic.woff2') format('woff2'),
+        url('Poligon-BoldItalic.woff') format('woff'),
+        url('Poligon-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Black.woff2') format('woff2'),
+        url('Poligon-Black.woff') format('woff'),
+        url('Poligon-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Bold.woff2') format('woff2'),
+        url('Poligon-Bold.woff') format('woff'),
+        url('Poligon-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-ExtraBold.woff2') format('woff2'),
+        url('Poligon-ExtraBold.woff') format('woff'),
+        url('Poligon-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-ExtraBoldItalic.woff2') format('woff2'),
+        url('Poligon-ExtraBoldItalic.woff') format('woff'),
+        url('Poligon-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-LightItalic.woff2') format('woff2'),
+        url('Poligon-LightItalic.woff') format('woff'),
+        url('Poligon-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Light.woff2') format('woff2'),
+        url('Poligon-Light.woff') format('woff'),
+        url('Poligon-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-MediumItalic.woff2') format('woff2'),
+        url('Poligon-MediumItalic.woff') format('woff'),
+        url('Poligon-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Medium.woff2') format('woff2'),
+        url('Poligon-Medium.woff') format('woff'),
+        url('Poligon-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-RegularItalic.woff2') format('woff2'),
+        url('Poligon-RegularItalic.woff') format('woff'),
+        url('Poligon-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Regular.woff2') format('woff2'),
+        url('Poligon-Regular.woff') format('woff'),
+        url('Poligon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-SemiBoldItalic.woff2') format('woff2'),
+        url('Poligon-SemiBoldItalic.woff') format('woff'),
+        url('Poligon-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-SemiBold.woff2') format('woff2'),
+        url('Poligon-SemiBold.woff') format('woff'),
+        url('Poligon-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-ThinItalic.woff2') format('woff2'),
+        url('Poligon-ThinItalic.woff') format('woff'),
+        url('Poligon-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Thin.woff2') format('woff2'),
+        url('Poligon-Thin.woff') format('woff'),
+        url('Poligon-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

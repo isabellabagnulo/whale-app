@@ -2,6 +2,7 @@ import { useEffect, useReducer, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 import { Back } from "../components/buttons/Back/Back"
+import { ENDPOINT } from "../libs/const"
 
 import './Add.css'
 
@@ -17,7 +18,11 @@ const initialState = {
     language: "",
     format: "",
     plot: "",
-    location: " "
+    location: {
+        data: {
+            id: null,
+        }
+    }
 }
 
 const reducer = (state, action) => {
@@ -42,6 +47,12 @@ const reducer = (state, action) => {
             return { ...state, format: action.payload }
         case "UPDATE_PLOT":
             return { ...state, plot: action.payload }
+        case "UPDATE_LOCATION":
+            return { ...state, location:{
+                data:{
+                        id: parseInt(action.payload)
+                }
+            } }
     }
 }
 
@@ -49,13 +60,24 @@ export const Add = ({location}) => {
     const [active, setActive] = useState(false)
     const navigate = useNavigate()
     const [state, dispatch] = useReducer(reducer, initialState)
+    const [locations, setLocations] = useState([])
+    
+    useEffect(() => {
+        const getLocations = async () => {
+            const response = await fetch(ENDPOINT("locations"))
+            const {data} = await response.json()
+            setLocations(data)
+        }
+
+        return getLocations
+    }, [])
 
     async function handleSubmit(event) {
         event.preventDefault()
         // const hasErrors = formValidation(state)
 
             try{
-                const response = await fetch("http://localhost:1337/api/books", {
+                const response = await fetch("http://localhost:1337/api/books?populate=*", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -165,6 +187,7 @@ export const Add = ({location}) => {
                                 type="text"
                                 name="genre"
                                 id="genre"
+                                required
                                 value={state.genre}
                                 onChange={(event) => {
                                     dispatch({
@@ -181,6 +204,7 @@ export const Add = ({location}) => {
                                 type="text"
                                 name="publisher"
                                 id="publisher"
+                                required
                                 value={state.publisher}
                                 onChange={(event) => {
                                     dispatch({
@@ -197,6 +221,7 @@ export const Add = ({location}) => {
                                 type="text"
                                 name="year_of_publication"
                                 id="year_of_publication"
+                                required
                                 value={state.year_of_publication}
                                 onChange={(event) => {
                                     dispatch({
@@ -213,6 +238,7 @@ export const Add = ({location}) => {
                                 type="text"
                                 name="language"
                                 id="language"
+                                required
                                 value={state.language}
                                 onChange={(event) => {
                                     dispatch({
@@ -229,6 +255,7 @@ export const Add = ({location}) => {
                                 type="text"
                                 name="format"
                                 id="format"
+                                required
                                 value={state.format}
                                 onChange={(event) => {
                                     dispatch({
@@ -240,6 +267,30 @@ export const Add = ({location}) => {
                             <label htmlFor="format">Formato</label>
                         </div>
 
+                        <div className="input-box">
+                            <select 
+                                name=""
+                                id="location" 
+                                value={state.location.data.id}
+                                onChange={(event) => {
+                                    dispatch({
+                                        type: "UPDATE_LOCATION",
+                                        payload: event.target.value,
+                                    })
+                                }}
+                            >
+                                <option value="">Seleziona un locale</option>
+                                {locations.map((location, index) => (
+                                    <option 
+                                        key={index}
+                                        value={location.id}
+                                    >
+                                        {location.attributes.title}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
                     </div>
                     
                     <div className="input-box">
@@ -247,6 +298,7 @@ export const Add = ({location}) => {
                             type="text"
                             name="plot"
                             id="plot"
+                            required
                             value={state.plot}
                             onChange={(event) => {
                                 dispatch({

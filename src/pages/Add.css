@@ -1,19 +1,20 @@
 form{
     & .form-section{
-        padding: 20px 0 30px 0;
+        padding: 15px 0 10px 0;
         max-width: 400px;
         display: grid;
         gap: 10px;
-        /* grid-template-columns: repeat(2, 1fr); */
+        &:nth-child(2){
+            padding-bottom: 30px;
+        }
         & .form-sub-section{
             display: grid;
             gap: 10px;
         }
         & .input-box{
             position: relative;
-            & input, & textarea{
+            & input, & textarea, & select{
                 width: 100%;
-                padding: 20px 15px 10px 15px;
                 font-size: 16px;
                 color: #3C3B36;
                 border: 1px solid #D0CCC7;
@@ -28,9 +29,16 @@ form{
                     font-size: 10px;
                 }
                 &:focus{
-                    border: 2px solid rgba(60, 59, 54, 0.7);
+                    border: 2px solid #3772FF;
                     margin: 0;
                 }
+            }
+            & input, & textarea{
+                padding: 20px 15px 10px 15px;
+            }
+            & select{
+                padding: 15px 10px;
+                color: rgba(60, 59, 54, 0.7);
             }
             & textarea{
                 height: 300px;

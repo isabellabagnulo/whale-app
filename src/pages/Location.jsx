@@ -41,14 +41,16 @@ export const Location = () => {
                             <h1>{location.attributes.title}</h1>
                             <p className="text-light">{location.attributes.address}</p>
                             <p className="text-light">
-                                <span className="text-bold">{(location.attributes.books.data).length}</span>
+
+                                <span className="text-medium">{(location.attributes.books.data).length}</span>
                                 {
-                                    ((location.attributes.books.data).length <= 1) ? (
+                                    ((location.attributes.books.data).length > 0 && (location.attributes.books.data).length <= 1) ? (
                                         " libro disponibile"
                                     ) : (
                                         " libri disponibili"
                                     )
                                 }
+                                
                             </p>
                         </div>
                     </div>

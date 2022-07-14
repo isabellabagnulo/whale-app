@@ -18,22 +18,19 @@
 .search{
     padding: 15px 30px;
     border-radius: 50px;
-    border: 1px solid rgba(60, 59, 54, 0.5);
-    background: #FAF6F0;
+    border: 1px solid #E3E3E3;
+    background: #FCFCFC;
     width: 100%;
     margin: 1px;
     &:focus-visible{
-        border: 2px solid rgba(60, 59, 54, 0.7);
+        border: 2px solid #3772FF !important;
         margin: 0;
     }
 }
 
-/* .results{
-    padding: 20px 0 0 0;
-} */
 .search-card{
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
     padding: 5px;
     & .card-cover{
@@ -41,4 +38,10 @@
             height: 70px;
         }
     }
+}
+.results.active{
+    padding-top: 20px;
+    overflow-y: scroll;
+    height: 100%;
+    max-height: calc(100vh - 92.4px);
 }

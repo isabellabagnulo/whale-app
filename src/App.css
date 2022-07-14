@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-Thin.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-Thin.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-Thin.ttf) format('ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-Light.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-Light.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-Light.ttf) format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-Regular.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-Regular.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-Regular.ttf) format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-Medium.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-Medium.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-Medium.ttf) format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-SemiBold.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-SemiBold.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-SemiBold.ttf) format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-Bold.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-Bold.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-Bold.ttf) format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-ExtraBold.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-ExtraBold.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-ExtraBold.ttf) format('ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poligon';
+    src: 
+        local('MyFont'),
+        url(./assets/font/poligon/Poligon-Black.woff) format('woff'),
+        url(./assets/font/poligon/Poligon-Black.woff2) format('woff2'),
+        url(./assets/font/poligon/Poligon-Black.ttf) format('ttf');
+    font-weight: 900;
+    font-style: normal;
+}
