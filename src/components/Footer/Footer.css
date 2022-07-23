@@ -10,3 +10,9 @@ footer{
         font-size: 14px;
     }
 }
+
+@media(min-width: 1050px){
+    footer{
+        margin-top: 0;
+    }
+}

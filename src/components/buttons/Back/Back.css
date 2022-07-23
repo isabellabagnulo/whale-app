@@ -11,7 +11,7 @@
     top: 92.4px;
     left: 20px;
     z-index: 99;
-    box-shadow: 0 0 30px rgba(60, 60, 60, 0.15);
+    box-shadow: 0 0 5px rgba(60, 60, 60, 0.2);
     & .back-icon{
         display: flex;
         align-items: center;

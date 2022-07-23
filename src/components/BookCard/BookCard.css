@@ -21,8 +21,21 @@ a.book-card{
 }
 .home{
     & .book-card{
-        &:nth-child(2){
+        &:first-child{
             padding-top: 76.2px;
+        }
+    }
+}
+
+@media(min-width: 1050px){
+    .home{
+        & .book-card{
+            &:first-child{
+                padding-top: 50px;
+            }
+            &:last-child{
+                padding-bottom: 50px;
+            }
         }
     }
 }

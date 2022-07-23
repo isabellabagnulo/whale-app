@@ -23,13 +23,12 @@
 }
 
 @media(min-width: 1050px){
-    .card{
-        & .card-cover{
-            height: 150px;
-            width: 150px;
+    .location-card{
+        &:nth-child(3){
+            padding-top: 50px;
         }
-        & .card-description{
-            gap: 10px;
+        &:last-child{
+            padding-bottom: 50px;
         }
     }
 }

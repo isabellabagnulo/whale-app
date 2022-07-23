@@ -20,7 +20,7 @@ const initialState = {
     plot: "",
     location: {
         data: {
-            id: null,
+            id: 0,
         }
     }
 }
@@ -64,7 +64,7 @@ export const Add = ({location}) => {
     
     useEffect(() => {
         const getLocations = async () => {
-            const response = await fetch(ENDPOINT("locations"))
+            const response = await fetch("http://localhost:1337/api/locations?populate=*")
             const {data} = await response.json()
             setLocations(data)
         }
@@ -90,7 +90,7 @@ export const Add = ({location}) => {
             } catch (error) {
                 console.log(error)
             } finally {
-                navigate("/")
+                navigate(-1)
             }
     }
 
@@ -269,7 +269,7 @@ export const Add = ({location}) => {
 
                         <div className="input-box">
                             <select 
-                                name=""
+                                name="location"
                                 id="location" 
                                 value={state.location.data.id}
                                 onChange={(event) => {

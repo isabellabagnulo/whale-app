@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { ENDPOINT } from '../libs/const'
 import { BookCard } from '../components/BookCard/BookCard'
+import { Locations } from './Locations'
 import { Tabs } from '../components/buttons/Tabs/Tabs'
 
 export const Books = () => {
@@ -20,9 +21,12 @@ export const Books = () => {
     return (
         <main className="home">
             <Tabs />
-            {books.map(book => 
-                <BookCard key={book.id} book={book} location={book.attributes.location}/>
-            )}
+            <div className='scroll'>
+                {books.map(book => 
+                    <BookCard key={book.id} book={book} location={book.attributes.location}/>
+                )}
+            </div>
+            <div className='scroll hide-on-mobile'><Locations /></div>
         </main>
     )
 }

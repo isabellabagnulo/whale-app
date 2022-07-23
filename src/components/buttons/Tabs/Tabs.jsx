@@ -7,7 +7,7 @@ import './Tabs.css'
 export const Tabs = () => {
     // const [active, setActive] = useState(null)
     return(
-        <div className="tabs">
+        <div className="tabs hide-on-desktop">
             <NavLink to="/">Libri</NavLink>
             <NavLink to="/locations">Locali</NavLink>
         </div>

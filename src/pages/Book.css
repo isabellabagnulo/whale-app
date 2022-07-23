@@ -1,5 +1,8 @@
 .book{
     display: grid;
+    & h1{
+        padding-bottom: 15px;
+    }
     & .book-cover{
         width: 50vw;
         height: auto;
