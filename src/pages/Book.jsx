@@ -1,14 +1,18 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import { Back } from "../components/buttons/Back/Back"
 import { Button } from "../components/buttons/Button/Button"
+import { Delete } from "../components/buttons/Delete/Delete"
+import Modal  from "../components/Modal/Modal"
 
 import './Book.css'
 
 export const Book = () => {
     const [book, setBook] = useState()
+    const [modalOpen, setModalOpen] = useState(false);
     const params = useParams()
+    const navigate = useNavigate()
 
     useEffect(() => {
         const getBook = async () => {
@@ -21,14 +25,25 @@ export const Book = () => {
         return getBook
     }, [])
 
+    const destroy = () => {
+        fetch(`http://localhost:1337/api/books/${params.id}`, {
+            method: 'DELETE'
+        }).then(() => {
+            navigate("/")
+            console.log("excursion deleted")
+        })
+    }
+
     return (
+        <>
+        {modalOpen && <Modal action={destroy} setOpenModal={setModalOpen} />}
         <main>
             <Back url="/" />
 
             {book &&
                 <div className="book">
                     <img className="book-cover" src={`${book.attributes.cover_url}`} alt="" />
-                    <div className="book-content">
+                    <div className="book-content scroll">
                         <div className="book-header">
                             <h1>{book.attributes.title}</h1>
                             <p>{book.attributes.author}</p>
@@ -42,7 +57,7 @@ export const Book = () => {
                             {book.attributes.format && <p>FORMATO: <span className="text-medium">{book.attributes.format}</span></p> }
                             {book.attributes.isbn && <p>ISBN: <span className="text-medium">{book.attributes.isbn}</span></p> }
                         </div>
-                        
+
                         <Button
                             url={`/location/${book.attributes.location.data.id}`}
                             type=" outlined"
@@ -52,13 +67,24 @@ export const Book = () => {
                         {book.attributes.plot && 
                             <div className="book-plot">
                                 <h3 className="text-with-line"><span>Trama</span></h3>
-                                <p>{book.attributes.plot}</p>
+                                <p className="opacity-70">{book.attributes.plot}</p>
                             </div> 
                         }
+
+                        <button
+                            className="delete-button"
+                            onClick={() => {
+                            setModalOpen(true);
+                            }}
+                        >
+                            Conferma il ritiro del libro
+                        </button>
+
                     </div>
                     
                 </div>
             }
         </main>
+        </>
     )
 }

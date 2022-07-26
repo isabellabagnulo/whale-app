@@ -99,6 +99,16 @@ main{
     &.add-page{
         padding-top: 163.4px;
     }
+    &.map{
+        padding: 92.4px 0 0 0;
+        height: calc(100vh - 100.4px);
+        & .maps{
+            height: 100vh !important;
+        }
+    }
+    &.add-page{
+        padding-bottom: 20px;
+    }
 }
 .mappa{
     margin-top: 91.4px;
@@ -117,18 +127,26 @@ main{
         &.home{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            & .scroll{
-                overflow-x: scroll;
-                height: calc(100vh - 92.4px - 100.4px);
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-                &::-webkit-scrollbar{
-                    display: none;
-                }
-            }
+            gap: 50px;
+            padding-right: 0;
             & .locations{
                 padding-top: 0;
             }
+        }
+        &.map{
+            padding-top: 0;
+        }
+        &.add-page{
+            padding-bottom: 50px;
+        }
+    }
+    .scroll{
+        overflow-x: scroll;
+        height: calc(100vh - 92.4px - 100.4px);
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
         }
     }
 }
@@ -144,4 +162,9 @@ main{
     .hide-on-desktop{
         display: none;
     }
+}
+
+.pigeon-zoom-buttons {
+    top: 20px !important;
+    left: 20px !important;
 }

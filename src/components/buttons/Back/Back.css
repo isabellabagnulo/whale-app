@@ -12,6 +12,7 @@
     left: 20px;
     z-index: 99;
     box-shadow: 0 0 5px rgba(60, 60, 60, 0.2);
+    cursor: pointer;
     & .back-icon{
         display: flex;
         align-items: center;
@@ -21,5 +22,12 @@
 .add-page{
     & .back{
         margin: 20px 0;
+    }
+}
+
+@media(min-width: 1050px){
+    .back{
+        top: 132.4px;
+        left: 50px;
     }
 }

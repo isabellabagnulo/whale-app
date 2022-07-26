@@ -18,7 +18,7 @@ const center = {
 
 
 
-export const Map = () => {
+export const GoogleMap = () => {
 
     const [locations, setLocations] = useState([])
     useEffect(() => {

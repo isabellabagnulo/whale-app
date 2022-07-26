@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { ENDPOINT } from '../libs/const'
 import { BookCard } from '../components/BookCard/BookCard'
+import { MyMap } from './MyMap'
 import { Locations } from './Locations'
 import { Tabs } from '../components/buttons/Tabs/Tabs'
 
@@ -26,7 +27,7 @@ export const Books = () => {
                     <BookCard key={book.id} book={book} location={book.attributes.location}/>
                 )}
             </div>
-            <div className='scroll hide-on-mobile'><Locations /></div>
+            <div className='scroll hide-on-mobile'><MyMap /></div>
         </main>
     )
 }

@@ -18,11 +18,7 @@ const initialState = {
     language: "",
     format: "",
     plot: "",
-    location: {
-        data: {
-            id: 0,
-        }
-    }
+    location: 0
 }
 
 const reducer = (state, action) => {
@@ -48,13 +44,10 @@ const reducer = (state, action) => {
         case "UPDATE_PLOT":
             return { ...state, plot: action.payload }
         case "UPDATE_LOCATION":
-            return { ...state, location:{
-                data:{
-                        id: parseInt(action.payload)
-                }
-            } }
+            return { ...state, location: action.payload } 
     }
 }
+
 
 export const Add = ({location}) => {
     const [active, setActive] = useState(false)
@@ -145,23 +138,6 @@ export const Add = ({location}) => {
                     <div className="input-box">
                         <input 
                             type="text"
-                            name="isbn"
-                            id="isbn"
-                            required
-                            value={state.isbn}
-                            onChange={(event) => {
-                                dispatch({
-                                    type: "UPDATE_ISBN",
-                                    payload: event.target.value,
-                                })
-                            }}
-                        />
-                        <label htmlFor="isbn">Codice ISBN*</label>
-                    </div>
-
-                    <div className="input-box">
-                        <input 
-                            type="text"
                             name="cover"
                             id="cover"
                             required
@@ -174,6 +150,30 @@ export const Add = ({location}) => {
                             }}
                         />
                         <label htmlFor="cover">Copertina (url)*</label>
+                    </div>
+
+                    <div className="input-box">
+                        <select 
+                            name="location"
+                            id="location" 
+                            value={state.location}
+                            onChange={(event) => {
+                                dispatch({
+                                    type: "UPDATE_LOCATION",
+                                    payload: event.target.value,
+                                })
+                            }}
+                        >
+                            <option value="">Seleziona un locale*</option>
+                            {locations.map((location, index) => (
+                                <option 
+                                    key={index}
+                                    value={location.id}
+                                >
+                                    {location.attributes.title}
+                                </option>
+                            ))}
+                        </select>
                     </div>
 
                 </div>
@@ -268,27 +268,20 @@ export const Add = ({location}) => {
                         </div>
 
                         <div className="input-box">
-                            <select 
-                                name="location"
-                                id="location" 
-                                value={state.location.data.id}
+                            <input 
+                                type="text"
+                                name="isbn"
+                                id="isbn"
+                                required
+                                value={state.isbn}
                                 onChange={(event) => {
                                     dispatch({
-                                        type: "UPDATE_LOCATION",
+                                        type: "UPDATE_ISBN",
                                         payload: event.target.value,
                                     })
                                 }}
-                            >
-                                <option value="">Seleziona un locale</option>
-                                {locations.map((location, index) => (
-                                    <option 
-                                        key={index}
-                                        value={location.id}
-                                    >
-                                        {location.attributes.title}
-                                    </option>
-                                ))}
-                            </select>
+                            />
+                            <label htmlFor="isbn">Codice ISBN</label>
                         </div>
 
                     </div>

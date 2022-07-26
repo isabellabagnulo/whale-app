@@ -11,6 +11,34 @@
             display: grid;
             gap: 10px;
             width: 100vw;
+            & .flex{
+                & p:first-child{
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1050px){
+    .location{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+        & .location-cover{
+            height: calc(100vh - 91.4px - 100.4px);
+            width: 50vw;
+            margin: 0 -50px;
+            & .overlay{
+                padding: 70px 50px 50px 50px;
+                & .flex{
+                    display: flex;
+                    justify-content: space-between;
+                    & p:first-child{
+                        padding-bottom: 0;
+                    }
+                }
+            }
         }
     }
 }

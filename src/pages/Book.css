@@ -1,5 +1,6 @@
 .book{
     display: grid;
+    padding-bottom: 20px;
     & h1{
         padding-bottom: 15px;
     }
@@ -14,6 +15,24 @@
         gap: 30px;
         & .book-info p{
             padding: 3px;
+        }
+    }
+}
+
+@media(min-width: 1050px){
+    .book{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+        height: calc(100vh - 92.4px - 100.4px);
+        padding-bottom: 0;
+        & .book-cover{
+            width: 17vw;
+            align-self: center;
+        }
+        & .book-content{
+            padding: 50px 0;
+            gap: 40px;
         }
     }
 }
